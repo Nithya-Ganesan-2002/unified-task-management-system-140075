@@ -1,0 +1,103 @@
+.tasklist-panel {
+  padding: 1.5rem 2rem 1rem 2rem;
+  background: var(--bg-primary);
+  transition: background 0.2s;
+  flex: 1;
+  min-width: 260px;
+  max-width: 424px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.tasklist-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.3rem;
+}
+
+.tasklist-title {
+  font-size: 1.23rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.tasklist-newbtn {
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 7px;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.tasklist-newbtn:hover {
+  background: #1976d2;
+}
+
+.tasklist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.tasklist-item {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 9px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 0.6rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: background 0.18s, color 0.18s, box-shadow 0.21s;
+}
+
+.tasklist-item.selected,
+.tasklist-item:hover {
+  background: #e3f0fd;
+  color: #1976d2;
+  box-shadow: 0 1px 12px rgba(40, 44, 52, 0.07);
+}
+
+.task-title {
+  font-size: 1.09rem;
+  font-weight: 600;
+  margin-right: 0.8rem;
+}
+
+.task-completed {
+  font-size: 1rem;
+  color: #4caf50;
+  margin-left: 0.6rem;
+}
+
+.tasklist-secondary {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+  margin-left: 0.1rem;
+}
+
+.tasklist-loading,
+.tasklist-empty {
+  text-align: center;
+  color: var(--text-secondary);
+  padding: 2.5rem 0 1rem 0;
+  font-size: 1.11rem;
+}
+
+@media (max-width: 900px) {
+  .tasklist-panel {
+    max-width: 99vw;
+    min-width: unset;
+    padding: 0.8rem 0.49rem 1.3rem 0.52rem;
+  }
+}

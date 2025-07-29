@@ -1,0 +1,103 @@
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(44, 54, 74, 0.23);
+  backdrop-filter: blur(1.5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 11;
+}
+
+.taskdetail-modal {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border-radius: 13px;
+  padding: 2.2rem 2rem 1.7rem 2rem;
+  min-width: 320px;
+  max-width: 470px;
+  min-height: 200px;
+  box-shadow: 0 4px 28px rgba(30, 44, 74, 0.13);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.taskdetail-desc {
+  max-height: 120px;
+  overflow: auto;
+  margin: 0.2rem 0.1rem 0.4rem 0.1rem;
+  color: var(--text-primary);
+  font-size: 1rem;
+  background: var(--bg-primary);
+  padding: 0.5rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+}
+
+.taskdetail-actions {
+  margin-top: 1.3rem;
+  display: flex;
+  gap: 0.9rem;
+}
+
+.taskdetail-btn {
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 8px;
+  padding: 0.52rem 1.05rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.19s;
+}
+
+.taskdetail-btn.green {
+  background: #238f5b;
+}
+
+.taskdetail-btn.red {
+  background: #e1483a;
+}
+
+.taskdetail-btn:not(:disabled):hover {
+  opacity: 0.93;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.taskdetail-editform label {
+  font-weight: 500;
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.1rem;
+}
+
+.taskdetail-editform input,
+.taskdetail-editform textarea {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 0.7rem;
+  border-radius: 7px;
+  margin-top: 0.2rem;
+  font-size: 1rem;
+}
+
+.taskdetail-editform textarea {
+  min-height: 70px;
+  resize: vertical;
+}

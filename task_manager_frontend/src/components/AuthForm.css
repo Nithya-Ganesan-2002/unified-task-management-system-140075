@@ -1,0 +1,93 @@
+.authform-container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-primary);
+  z-index: 1;
+}
+
+.authform {
+  background: var(--bg-secondary);
+  box-shadow: 0 6px 28px rgba(40, 44, 52, 0.16);
+  border-radius: 16px;
+  padding: 2.7rem 2.5rem;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.authform h2 {
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.authform label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  color: var(--text-primary);
+  gap: 0.3rem;
+}
+
+.authform input {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 0.6rem 0.9rem;
+  border-radius: 7px;
+  font-size: 1.01rem;
+  margin-top: 0.2rem;
+}
+
+.authform-btn {
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 8px;
+  padding: 0.85rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 0.7rem;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.21s;
+}
+
+.authform-btn:hover {
+  background: #1976d2;
+}
+
+.authform-toggle {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.99rem;
+  margin-top: 0.36rem;
+}
+
+.authform-toggle span {
+  cursor: pointer;
+  color: var(--button-bg);
+  margin-left: 0.19rem;
+  font-weight: 600;
+}
+
+.authform-error {
+  color: #e1483a;
+  font-size: 0.98rem;
+  background: #fff1f0;
+  border: 1px solid #ffbbbb;
+  border-radius: 6px;
+  margin-top: 0.2rem;
+  padding: 0.25rem 0.7rem;
+}
+
+@media (max-width: 480px) {
+  .authform {
+    min-width: unset;
+    width: 94vw;
+    padding: 1.5rem 0.7rem;
+  }
+}
